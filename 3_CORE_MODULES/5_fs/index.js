@@ -4,7 +4,7 @@ const fs = require("fs");
 const port = 3000;
 
 const server = http.createServer((req, res) => {
-  fs.readFile("mensagem.html", function (err, data) {
+  fs.readFile("mensagem.html", function (err, data) { //lê o arquivo e declara a função anonima para erros
     res.writeHead(200, { "Content-Type": "text/html" });
     res.write(data);
     return res.end();

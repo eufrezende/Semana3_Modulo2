@@ -3,7 +3,7 @@ const http = require('http')
 const port = 3000
 
 const server = http.createServer((req, res) => {
-  res.write('Oi HTTP')
+  res.write('Oi HTTP') //mensagem viasualizada no localhost:3000
   res.end()
 })
 
