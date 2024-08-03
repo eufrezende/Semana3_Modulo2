@@ -8,7 +8,7 @@
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "Matheus",
+  "author": "Felipe",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.21"

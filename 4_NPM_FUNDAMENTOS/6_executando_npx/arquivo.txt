@@ -1,1 +1,2 @@
+Execute no terminal:
 npx cowsay -d "Mensagem"
