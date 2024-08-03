@@ -6,12 +6,15 @@ const port = 3000
 
 const server = http.createServer((req, res) => {
   var q = url.parse(req.url, true)
+  //com base no url acessado vai saber qual é o filename 
+  //e pega o nome dele com o substring(1)
   var filename = q.pathname.substring(1)
 
   console.log(filename)
-
+  //html pq ele só vai aceitar arquivos html
   if (filename.includes('html')) {
-    if (fs.existsSync(filename)) {
+    //trabalhando de forma síncrona ele veririfa se o arquivo existe
+    if (fs.existsSync(filename)) { //renderiza a página acessada
       fs.readFile(filename, function (err, data) {
         res.writeHead(200, { 'Content-Type': 'text/html' })
         res.write(data)

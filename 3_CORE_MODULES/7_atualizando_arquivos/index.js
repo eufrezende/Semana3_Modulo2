@@ -18,8 +18,9 @@ const server = http.createServer((req, res) => {
       return res.end();
     });
   } else {
+    //pega o novo nome e lança uma linha abaixo do anterior. o\r garante que o \n funcione
     const nameNewLine = name + "\r\n";
-
+    //o método appendFile que recebe o novo nome para gravação
     fs.appendFile("arquivo.txt", nameNewLine, function (err, data) {
       res.writeHead(302, {
         Location: "/",
