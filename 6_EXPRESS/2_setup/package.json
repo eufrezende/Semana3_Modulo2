@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Matheus <matheus@horadecodar.com.br> (http://www.horadecodar.com.br/)",
+  "author": "Felipe",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"

@@ -6,6 +6,7 @@ const path = require('path')
 
 const basePath = path.join(__dirname, 'templates')
 
+//declaraa a variável para chamar o routers
 const users = require('./users')
 
 // ler o body
@@ -30,6 +31,8 @@ var checkAuth = function (req, res, next) {
 
 app.use(checkAuth)
 
+//declara o /users do url aqui e tira do routes, 
+//deixando só o endereçamento direto lá, e o referenciamento + link aqui
 app.use('/users', users)
 
 app.get('/', (req, res) => {

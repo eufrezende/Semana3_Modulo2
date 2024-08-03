@@ -19,7 +19,8 @@ var checkAuth = function (req, res, next) {
 
 app.use(checkAuth)
 
-// antes do /
+// antes do / 
+// faz-se isso pra ele nao cair na primeira / da url (a principal)
 app.get('/users/:id', (req, res) => {
   console.log(`Carregando usuário: ${req.params.id}`)
 

@@ -13,6 +13,7 @@ app.use(
   }),
 )
 
+//todo objeto do body é transformado em um objeto JS
 app.use(express.json())
 
 var checkAuth = function (req, res, next) {
@@ -28,12 +29,18 @@ var checkAuth = function (req, res, next) {
 
 app.use(checkAuth)
 
+//uma rota para trazer o formulário
 app.get('/users/add', (req, res) => {
+  //envia o arquivo (form) para o front
   res.sendFile(`${basePath}/userform.html`)
 })
 
+//tratar a requisição
 app.post('/users/save', (req, res) => {
+  //utiliza a requisição para dar uma resposta ao usuário
+  //tratamento dos dados
   console.log(req.body)
+  //extraindo as variáveis do form
   const name = req.body.name
   const age = req.body.age
 

@@ -1,10 +1,11 @@
 var express = require('express')
 var router = express.Router()
-
 const path = require('path')
 
 const basePath = path.join(__dirname, '../templates')
 
+//remove o /users/add e deixa só o /add
+//o /users fica na declaração do .use na pasta principal
 router.get('/add', (req, res) => {
   res.sendFile(`${basePath}/userform.html`)
 })

@@ -17,6 +17,7 @@ app.use(
 
 app.use(express.json())
 
+//declaração da pasta de arquivos estáticos
 app.use(express.static('public'))
 
 var checkAuth = function (req, res, next) {
