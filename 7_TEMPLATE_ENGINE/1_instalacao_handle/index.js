@@ -3,10 +3,13 @@ const exphbs = require('express-handlebars')
 
 const app = express()
 
-app.engine('handlebars', exphbs())
-app.set('view engine', 'handlebars')
+//define o handeblars e executa a função importada
+app.engine('handlebars', exphbs.engine())
+app.set('view engine', 'handlebars') //
+
 
 app.get('/', function (req, res) {
+  //renderiza a view home
   res.render('home', { layout: false })
 })
 

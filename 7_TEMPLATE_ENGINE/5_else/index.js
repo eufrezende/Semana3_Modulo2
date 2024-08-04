@@ -3,13 +3,13 @@ const exphbs = require("express-handlebars");
 
 const app = express();
 
-app.engine("handlebars", exphbs());
+app.engine("handlebars", exphbs.engine());
 app.set("view engine", "handlebars");
 
 app.get("/", function (req, res) {
   const user = {
-    name: "Matheus",
-    surname: "Battisti",
+    name: "Felipe",
+    surname: "Rezende",
   };
 
   const approved = false;

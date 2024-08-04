@@ -1,8 +1,8 @@
-<h1>Confira nossos produtos:</h1>
-{{#each products}}
+<h1>Nossas estantes:</h1>
+{{#each produtos}}
   <div>
-    <h3>{{this.title}}</h3>
-    <p>R${{this.price}}</p>
-    <p><a href="/product/{{this.id}}">Ver mais</a></p>
+    <h3>{{this.titulo}}</h3>
+    <p>{{this.autor}}</p>
+    <p><a href="/products/{{this.id}}">Ver mais</a></p>
   </div>
 {{/each}}

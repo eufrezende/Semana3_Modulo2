@@ -3,17 +3,20 @@ const exphbs = require("express-handlebars");
 
 const app = express();
 
+//invoca o hbs e cria o objeto de verificação do partials
 const hbs = exphbs.create({
   partialsDir: ["views/partials/"],
 });
 
-app.engine("handlebars", hbs.engine);
+//altera a forma como passa a variável, pois ela passa a ser executada
+//na declaração da variável hbs (declarada acima)
+app.engine("handlebars", hbs.engine());
 app.set("view engine", "handlebars");
 
 app.get("/", function (req, res) {
   const user = {
-    name: "Matheus",
-    surname: "Battisti",
+    name: "Felipe",
+    surname: "Rezende",
   };
 
   res.render("home", { user: user, auth: true });
@@ -36,6 +39,7 @@ app.get("/post", function (req, res) {
   res.render("blogpost", { post });
 });
 
+//aplicando o partials
 app.get("/blog", function (req, res) {
   const posts = [
     {

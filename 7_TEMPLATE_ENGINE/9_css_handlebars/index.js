@@ -14,8 +14,8 @@ app.use(express.static("public"));
 
 app.get("/", function (req, res) {
   const user = {
-    name: "Matheus",
-    surname: "Battisti",
+    name: "Felipe",
+    surname: "Rezende",
   };
 
   res.render("home", { user: user, auth: true });
