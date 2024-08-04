@@ -24,6 +24,7 @@ app.get('/', function (req, res) {
   res.render('home')
 })
 
+//
 app.get('/users/create', function (req, res) {
   res.render('adduser')
 })
@@ -37,6 +38,7 @@ app.post('/users/create', function (req, res) {
     newsletter = true
   }
 
+  //cria o usuário no banco
   User.create({ name, occupation, newsletter })
 
   res.redirect('/')

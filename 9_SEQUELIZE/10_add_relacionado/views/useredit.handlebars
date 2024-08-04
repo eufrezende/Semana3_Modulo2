@@ -19,9 +19,11 @@
   </div>
   <input type="submit" value="Editar">
 </form>
+<!-- Form de adição -->
 <div class="address-container">
   <h2>Endereços</h2>
   <form action="/address/create" method="POST">
+    <!-- Fendereço referenciado por usuário pelo ID -->
     <input type="hidden" name="UserId" value="{{user.id}}">
     <div class="form-control">
       <label for="street">Rua:</label>

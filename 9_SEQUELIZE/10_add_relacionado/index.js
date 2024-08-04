@@ -128,12 +128,14 @@ app.post('/users/update', function (req, res) {
     .catch((err) => console.log(err))
 })
 
+//rota de post
 app.post('/address/create', function (req, res) {
   const UserId = req.body.UserId
   const street = req.body.street
   const number = req.body.number
   const city = req.body.city
 
+  //cria o objeto para inserir as propriedades 
   const address = {
     street,
     number,
@@ -141,6 +143,7 @@ app.post('/address/create', function (req, res) {
     UserId,
   }
 
+  //passa o adress como uma entidade para ser criada
   Address.create(address)
     .then(res.redirect(`/users/edit/${UserId}`))
     .catch((err) => console.log(err))

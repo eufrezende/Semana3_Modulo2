@@ -1,7 +1,9 @@
 const { Sequelize } = require('sequelize')
 
+//o banco, o usuário e a senha como parâmetros
 const sequelize = new Sequelize('nodesequelize', 'root', '', {
   host: 'localhost',
+  //qual banco será utilizado
   dialect: 'mysql',
 })
 

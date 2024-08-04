@@ -145,10 +145,12 @@ app.post('/address/create', function (req, res) {
     .catch((err) => console.log(err))
 })
 
+//rota de remoção
 app.post('/address/delete/', function (req, res) {
   const id = req.body.id
 
   Address.destroy({
+    //identifica o id para a remoção
     where: {
       id: id,
     },

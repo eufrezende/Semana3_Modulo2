@@ -5,6 +5,7 @@ const db = require('../db/conn')
 const User = db.define('User', {
   name: {
     type: DataTypes.STRING,
+    //não poderá ter valore nulos
     allowNull: false,
   },
   occupation: {

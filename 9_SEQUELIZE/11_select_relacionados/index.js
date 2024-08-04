@@ -82,7 +82,9 @@ app.get('/users/edit/:id', function (req, res) {
   const id = req.params.id
 
   User.findOne({
+    //adiciona o include
     include: Address,
+    //onde o id é o da requisição
     where: {
       id: id,
     },

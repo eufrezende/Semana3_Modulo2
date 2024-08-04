@@ -63,6 +63,7 @@ app.get('/users/:id', function (req, res) {
     .catch((err) => console.log(err))
 })
 
+//Delete
 app.post('/users/delete/:id', function (req, res) {
   const id = req.params.id
 

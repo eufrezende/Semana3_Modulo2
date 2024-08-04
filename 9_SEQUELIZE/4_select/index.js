@@ -20,7 +20,9 @@ app.use(express.json())
 
 app.use(express.static('public'))
 
+//lendo os dados
 app.get('/', function (req, res) {
+  //só vai seguir qnd os usuários chegarem
   User.findAll({ raw: true })
     .then((users) => {
       console.log(users)

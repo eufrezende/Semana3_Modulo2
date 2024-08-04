@@ -47,7 +47,9 @@ app.post('/users/create', function (req, res) {
   res.redirect('/')
 })
 
+//WHERE
 app.get('/users/:id', function (req, res) {
+  //passa o id pela url
   const id = req.params.id
 
   User.findOne({

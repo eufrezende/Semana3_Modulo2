@@ -2,6 +2,7 @@ const { DataTypes } = require('sequelize')
 
 const db = require('../db/conn')
 
+//o models que fará relação com esse
 const User = require('./User')
 
 const Address = db.define('Address', {
@@ -17,6 +18,7 @@ const Address = db.define('Address', {
   },
 })
 
+//definição do relacionamento
 Address.belongsTo(User)
 
 module.exports = Address
