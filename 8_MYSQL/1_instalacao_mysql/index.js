@@ -13,6 +13,7 @@ app.get('/', function (req, res) {
   res.render('home')
 })
 
+//variável de conexao sql
 const conn = mysql.createConnection({
   host: 'localhost',
   user: 'root',

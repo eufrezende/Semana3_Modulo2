@@ -70,6 +70,7 @@ app.get('/books/:id', function (req, res) {
   })
 })
 
+//edição dos dados
 app.get('/books/edit/:id', function (req, res) {
   const id = req.params.id
 

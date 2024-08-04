@@ -36,6 +36,7 @@ app.post('/books/insertbook', function (req, res) {
   })
 })
 
+//rota para resgatar todos os livros
 app.get('/books', function (req, res) {
   const query = `SELECT * FROM books`
 

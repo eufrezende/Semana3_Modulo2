@@ -7,12 +7,12 @@ const app = express()
 app.engine('handlebars', exphbs())
 app.set('view engine', 'handlebars')
 
+//para conseguir pegar o body em json
 app.use(
   express.urlencoded({
     extended: true,
   }),
 )
-
 app.use(express.json())
 
 app.use(express.static('public'))
@@ -25,6 +25,7 @@ app.post('/books/insertbook', function (req, res) {
   const title = req.body.title
   const pageqty = req.body.pageqty
 
+  //instrução para o banco de dados
   const query = `INSERT INTO books (title, pageqty) VALUES ('${title}', ${pageqty})`
 
   conn.query(query, function (err) {

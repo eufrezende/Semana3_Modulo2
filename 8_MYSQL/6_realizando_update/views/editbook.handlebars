@@ -1,5 +1,6 @@
 <h1>Edite o seu livro:</h1>
 <form class="form" action="/books/updatebook" method="POST">
+  <!-- Passa um id pro usuário sem q ele saiba, utilizando o hidden -->
   <input type="hidden" name="id" value="{{book.id}}">
   <div class="form-control">
     <label for="title">Título:</label>

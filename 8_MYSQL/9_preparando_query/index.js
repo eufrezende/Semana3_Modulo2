@@ -29,8 +29,9 @@ app.post('/books/insertbook', function (req, res) {
   const pageqty = req.body.pageqty
 
   const query = `INSERT INTO books (??, ??) VALUES (?, ?)`
+  //o array na ordem dizendo o que será substituito pelo q.
   const data = ['title', 'pageqty', title, pageqty]
-
+  //acrescenta o data ao argumento da função
   pool.query(query, data, function (err) {
     if (err) {
       console.log(err)

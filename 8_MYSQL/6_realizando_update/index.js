@@ -88,7 +88,9 @@ app.get('/books/edit/:id', function (req, res) {
   })
 })
 
+//Atualização
 app.post('/books/updatebook', function (req, res) {
+  //resgata os dados vindos pelo body
   const id = req.body.id
   const title = req.body.title
   const pageqty = req.body.pageqty

@@ -1,6 +1,9 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 
+//importando o conection poll
+// a variável de execução passa a ser a poll
+//todos os comn utilizados antes, agora passam a ser pool
 const pool = require('./db/conn')
 
 console.log(pool)

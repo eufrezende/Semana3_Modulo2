@@ -104,6 +104,7 @@ app.post('/books/updatebook', function (req, res) {
   })
 })
 
+//deletando dados
 app.post('/books/remove/:id', function (req, res) {
   const id = req.params.id
 

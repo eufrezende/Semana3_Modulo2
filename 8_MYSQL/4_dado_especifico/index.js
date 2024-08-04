@@ -52,7 +52,9 @@ app.get('/books', function (req, res) {
   })
 })
 
+//Resgatando dados
 app.get('/books/:id', function (req, res) {
+  //pega os parâmetros da URL
   const id = req.params.id
 
   const query = `SELECT * FROM books WHERE id = ${id}`
@@ -61,7 +63,7 @@ app.get('/books/:id', function (req, res) {
     if (err) {
       console.log(err)
     }
-
+    //o 0 é para retornar apenas o primeiro do array
     const book = data[0]
 
     console.log(data[0])
