@@ -1,5 +1,5 @@
 const User = require('../models/User')
-
+//faz a criptografia e a descriptografia da senha
 const bcrypt = require('bcryptjs')
 
 module.exports = class UserController {

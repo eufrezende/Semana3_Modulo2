@@ -1,6 +1,8 @@
 const Tought = require('../models/Tought')
 const User = require('../models/User')
 
+//importa os operadores do sequelize, funciona meio que para comparação.  
+//ele permite realizar busca de like (filtro) de palavras que contenham o termo buscado
 const { Op } = require('sequelize')
 
 module.exports = class ToughController {
@@ -71,6 +73,8 @@ module.exports = class ToughController {
     Tought.findAll({
       include: User,
       where: {
+        //filtra o título  
+        //%% => diz que nao interessa o que vier antes ou depois da palavra buscada
         title: { [Op.like]: `%${search}%` },
       },
       order: [['createdAt', order]],
